@@ -3,7 +3,6 @@ package ru.skypro;
 public class Truck extends Vehicle implements Wheelable, Engineable, Trailerable {
 
     public Truck(String modelName, int wheelsCount) {
-
         super(modelName, wheelsCount);
     }
     @Override
