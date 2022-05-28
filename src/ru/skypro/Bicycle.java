@@ -1,19 +1,22 @@
 package ru.skypro;
 
-public class Bicycle extends Vehicle implements Wheelable{
+public class Bicycle extends Vehicle implements Wheelable, Serviceable {
+
 
     public Bicycle(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
 
-    @Override
     public void updateTyre() {
-
-        System.out.println("Меняем покрышку");
+        System.out.println("Меняем покрышку велосипеда.");
     }
 
     @Override
-    public void check(Vehicle bicycle) {
-        super.check(bicycle);
+    public void service() {
+            System.out.println("Обслуживаем велосипед  " + getModelName());
+            for (int i = 0; i < getWheelsCount(); i++) {
+                updateTyre();
+            }
     }
+
 }

@@ -4,24 +4,37 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Vehicle car = new Vehicle("car1", 4);
-        Vehicle car1 = new Vehicle("car2", 4);
-        Vehicle truck = new Vehicle("truck1 ", 6);
-        Vehicle truck1 = new Vehicle("truck2 ", 8);
-        Vehicle bicycle = new Vehicle("bicycle1", 2);
-        Vehicle bicycle1 = new Vehicle("bicycle2", 2);
+        Car car = new Car ("car1", 4);
+        Car car1 = new Car ("car2",4);
+
+        Truck truck = new Truck("truck1 ", 6);
+        Truck truck1 = new Truck("truck2 ", 8);
+
+        Bicycle bicycle = new Bicycle("bicycle1", 2);
+        Bicycle bicycle1 = new Bicycle("bicycle2", 2);
+
+        ServiceStation station = new ServiceStation();
+        station.station(car);
+        station.station(car1);
+        station.station(truck);
+        station.station(truck1);
+        station.station(bicycle);
+        station.station(bicycle1);
 
 
-         car.check(car);
-         car.checkCar(car);
-         car1.check(car1);
-         car1.checkCar(car1);
-         truck.check(truck);
-         truck.checkTruck(truck);
-         truck1.check(truck1);
-         truck.checkTruck(truck1);
-         bicycle.check(bicycle);
-         bicycle1.check(bicycle1);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
